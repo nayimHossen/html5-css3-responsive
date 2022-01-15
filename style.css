@@ -1,6 +1,8 @@
 /*................................................
     common styles
 ..................................................*/
+
+/* google fonts links */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
@@ -98,6 +100,7 @@ body{
     font-weight: bold;
     font-size: 15px;
     border: none;
+    cursor: pointer;
 }
 .main-button:hover i{
     transform: translate(20px,0);
@@ -181,20 +184,80 @@ footer{
 }
 
 /*................................................
-    responsive area style
+    blog section style
+..................................................*/
+.tools-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.tools-cart{
+    box-shadow: 2px 5px 16px 0px #cacdd1;
+    padding: 25px;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: #3A3A3A;
+    text-align: center;
+    font-weight: bold;
+}
+.tools-cart img{
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 5px;
+}
+.tools-cart span i{
+    margin: 5px;
+    font-size: 20px;
+    color: coral;
+    background-color: rgb(221, 219, 219);
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/*................................................
+    featured area style
+..................................................*/
+.featured-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.div-text{
+    margin-left: 10%;
+}
+
+
+/*................................................
+    mobile responsive area style
 ..................................................*/
 
-@media (max-width: 320px) {
+@media only screen and (max-width: 450px) {
     .popular-products{
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+    .product{
+        margin-bottom: 10px;
+    }
+    .tools-container{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
         width: 100%;
-        grid-auto-flow: row;
-        justify-content: center;
+    }
+    .featured-section{
+       flex-direction: column;
     }
 }
 
-@media only screen and (max-width: 600px) {
+
+/*................................................
+    tabla responsive area style
+..................................................*/
+
+@media only screen and (max-width: 770px) {
     .navbar-toggle{
         display: block;
     }
@@ -220,10 +283,20 @@ footer{
         margin-bottom: 10px;
     }
     .popular-products{
-        display: grid;
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: center;
+        margin-left: 60px;
+    }
+    .tools-container{
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-self: center;
+        margin-left: 60px;
+    }
+    .featured-section{
+        flex-direction: column;
     }
 }
