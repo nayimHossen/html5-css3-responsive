@@ -236,6 +236,8 @@ footer{
     .popular-products{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .product{
         margin-bottom: 10px;
@@ -243,6 +245,12 @@ footer{
     .tools-container{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .header-section{
+        justify-content: center;
+        align-items: center;
     }
     footer{
         width: 100%;
@@ -272,6 +280,7 @@ footer{
     .header-section{
         flex-wrap: wrap-reverse;
         align-items: center;
+        justify-content: center;
     }
     .main-camera{
         margin-bottom: 30px;
@@ -287,14 +296,12 @@ footer{
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: center;
-        margin-left: 60px;
     }
     .tools-container{
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-self: center;
-        margin-left: 60px;
     }
     .featured-section{
         flex-direction: column;
